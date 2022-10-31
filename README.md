@@ -27,8 +27,9 @@ Terraform is an IAC tool, used primarily by DevOps teams to automate various inf
 ```
 
 
-# Game Rules:-
-It's a pretty simple hand game usually played between two players. 
+## Game Rules:-
+It's a pretty simple hand game usually played between two players.
+
 Rock beats scissors, scissors beats paper and paper beats rock.
 If both players choose the same thing, it results in a draw. 
 
