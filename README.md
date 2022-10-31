@@ -12,7 +12,7 @@ based on what the computer(depicting the opponent) has chosen. The score-board k
 > html, css and js
 
 
-# Terraform
+## Terraform
 Terraform is an IAC tool, used primarily by DevOps teams to automate various infrastructure tasks. The provisioning of cloud resources, for instance, is one of the main use cases of Terraform. It's a cloud-agnostic, open-source provisioning tool written in the Go language and created by HashiCorp
 ```hcl
 > cd ./terraform
