@@ -19,9 +19,9 @@ function convertToWord(letter) {
     case "r":
       return "Rock";
     case "p":
-        return "Paper";
+      return "Paper";
     case "s":
-        return "Scissors";
+      return "Scissors";
   }
 }
 
