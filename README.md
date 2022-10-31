@@ -5,10 +5,12 @@
 > This is a single-player game, in which once you have made your choice, you could see whether you win, lose or the match ends in a draw
 based on what the computer(depicting the opponent) has chosen. The score-board keeps account of how many games you have won and lost.
 
+
 ## Technologies Used
 > Terraform
 
 > html, css and js
+
 
 # Terraform
 Terraform is an IAC tool, used primarily by DevOps teams to automate various infrastructure tasks. The provisioning of cloud resources, for instance, is one of the main use cases of Terraform. It's a cloud-agnostic, open-source provisioning tool written in the Go language and created by HashiCorp
@@ -25,7 +27,7 @@ Terraform is an IAC tool, used primarily by DevOps teams to automate various inf
 ```
 
 
-# Game Rules:-
+## Game Rules:-
 It's a pretty simple hand game usually played between two players.
 
 Rock beats scissors, scissors beats paper and paper beats rock.
