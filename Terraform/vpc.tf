@@ -7,12 +7,11 @@ resource "aws_vpc" "Project_VPC" {
 }
 
 resource "aws_subnet" "Project_Subnet" {
-	count = length(var.CidrSubnet)
 	vpc_id = aws_vpc.Project_VPC.id
-	cidr_block = element(var.CidrSubnet,count.index)
-	availability_zone = element(var.az,count.index)
+	cidr_block = "10.0.1.0/24"
+	availability_zone = "ap-south-1a"
 	tags = {
-		Name = "Subnet-${count.index+1}"
+		Name = "Subnet1"
 	}
 }
 
@@ -35,8 +34,7 @@ resource "aws_route_table" "Project_route_tbl" {
 }
 
 resource "aws_route_table_association" "a" {
-	count = length(var.CidrSubnet)
-	subnet_id      = element(aws_subnet.Project_Subnet.*.id,count.index)
+	subnet_id      = aws_subnet.Project_Subnet.id
 	route_table_id = aws_route_table.Project_route_tbl.id
 }
 
