@@ -1,43 +1,10 @@
-resource "aws_security_group" "securityGroup" {
-  name        = var.sgName
-  description = "Allow TLS inbound traffic"
-  vpc_id      = var.vpcID
-
-
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = [ "0.0.0.0/0" ]
-  }
-
-  ingress {
-    description = "HTTP"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = [ "0.0.0.0/0" ]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "securityGroup"
-  }
-}
-
 resource "aws_instance" "RockPaperScissor" {
   ami                  = var.amiID
   instance_type        = var.instanceType
-  availability_zone    = var.region
   key_name             = var.keyName
-  security_groups      = [ aws_security_group.securityGroup.name ]
+  associate_public_ip_address = "true"
+  
+  vpc_security_group_ids      = [ "${aws_default_security_group.default.id}" ]
   user_data            = <<-EOF
                         #! /bin/bash
                         sudo yum install httpd -y
