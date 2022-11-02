@@ -1,0 +1,22 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "> This project is a basic game which we play in day to day life with friends, so here \"AnSaVi\" Team came up with an idea of creating a game which you can play with computer and we are using terraform to automate our infrastructure as a code which will help us in deploying online server quite effectively.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visheshgargavi/AnSaVi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visheshgargavi/AnSaVi/issues"
+  },
+  "homepage": "https://github.com/visheshgargavi/AnSaVi#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
